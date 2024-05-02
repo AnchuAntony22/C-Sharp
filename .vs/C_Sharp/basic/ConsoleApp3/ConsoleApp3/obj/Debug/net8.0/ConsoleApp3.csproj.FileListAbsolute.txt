@@ -1,0 +1,15 @@
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\bin\Debug\net8.0\ConsoleApp3.exe
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\bin\Debug\net8.0\ConsoleApp3.deps.json
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\bin\Debug\net8.0\ConsoleApp3.runtimeconfig.json
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\bin\Debug\net8.0\ConsoleApp3.dll
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\bin\Debug\net8.0\ConsoleApp3.pdb
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\ConsoleApp3.GeneratedMSBuildEditorConfig.editorconfig
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\ConsoleApp3.AssemblyInfoInputs.cache
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\ConsoleApp3.AssemblyInfo.cs
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\ConsoleApp3.csproj.CoreCompileInputs.cache
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\ConsoleApp3.sourcelink.json
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\ConsoleApp3.dll
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\refint\ConsoleApp3.dll
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\ConsoleApp3.pdb
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\ConsoleApp3.genruntimeconfig.cache
+F:\netcourse\C_Sharp\.vs\C_Sharp\basic\ConsoleApp3\ConsoleApp3\obj\Debug\net8.0\ref\ConsoleApp3.dll

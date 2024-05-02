@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\netcourse\\C_Sharp\\basic\\",
+  "WorkspaceRootPath": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76C98669-B916-4DD8-8F50-9B2AA739412B}|ConsoleApp2\\ConsoleApp2.csproj|f:\\netcourse\\c_sharp\\basic\\consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C98669-B916-4DD8-8F50-9B2AA739412B}|ConsoleApp2\\ConsoleApp2.csproj|solutionrelative:consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\ConsoleApp2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ConsoleApp2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BF5E1E4-A892-46CA-810D-824AE115AB3D}|ConsoleApp1\\ConsoleApp1.csproj|f:\\netcourse\\c_sharp\\basic\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BF5E1E4-A892-46CA-810D-824AE115AB3D}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\ConsoleApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ConsoleApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\classcal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:classcal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,36 +28,40 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "F:\\netcourse\\C_Sharp\\basic\\ConsoleApp1\\Program.cs",
+              "DocumentMoniker": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\ConsoleApp1\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
-              "ToolTip": "F:\\netcourse\\C_Sharp\\basic\\ConsoleApp1\\Program.cs",
+              "ToolTip": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\ConsoleApp1\\Program.cs",
               "RelativeToolTip": "ConsoleApp1\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T08:32:55.818Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "classcal.cs",
+              "DocumentMoniker": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\classcal.cs",
+              "RelativeDocumentMoniker": "classcal.cs",
+              "ToolTip": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\classcal.cs",
+              "RelativeToolTip": "classcal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T08:14:56.945Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "F:\\netcourse\\C_Sharp\\basic\\ConsoleApp2\\Program.cs",
+              "DocumentMoniker": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\ConsoleApp2\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp2\\Program.cs",
-              "ToolTip": "F:\\netcourse\\C_Sharp\\basic\\ConsoleApp2\\Program.cs",
+              "ToolTip": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\ConsoleApp2\\Program.cs",
               "RelativeToolTip": "ConsoleApp2\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAiAAAA",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAG8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T07:41:57.664Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

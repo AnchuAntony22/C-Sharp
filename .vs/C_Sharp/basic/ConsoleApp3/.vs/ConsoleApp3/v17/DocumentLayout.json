@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\ConsoleApp3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{22F54DDE-B334-4A49-8C77-8953DEF9EA62}|ConsoleApp3\\ConsoleApp3.csproj|f:\\netcourse\\c_sharp\\.vs\\c_sharp\\basic\\consoleapp3\\consoleapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22F54DDE-B334-4A49-8C77-8953DEF9EA62}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\netcourse\\C_Sharp\\ConsoleApp1\\ConsoleApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 298,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\netcourse\\C_Sharp\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "ToolTip": "F:\\netcourse\\C_Sharp\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T08:22:44.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\ConsoleApp3\\ConsoleApp3\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp3\\Program.cs",
+              "ToolTip": "F:\\netcourse\\C_Sharp\\.vs\\C_Sharp\\basic\\ConsoleApp3\\ConsoleApp3\\Program.cs",
+              "RelativeToolTip": "ConsoleApp3\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T08:22:14.303Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
