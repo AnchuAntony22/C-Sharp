@@ -13,7 +13,7 @@
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 100,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -29,8 +29,7 @@
               "RelativeToolTip": "..\\ConsoleApp1\\ConsoleApp1\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T08:25:52.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-02T08:25:52.858Z"
             },
             {
               "$type": "Document",
@@ -38,9 +37,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\netcourse\\C_Sharp\\ConsoleApp2\\ConsoleApp2\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp2\\Program.cs",
-              "ToolTip": "F:\\netcourse\\C_Sharp\\ConsoleApp2\\ConsoleApp2\\Program.cs",
-              "RelativeToolTip": "ConsoleApp2\\Program.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwBkAAAAAAAAA",
+              "ToolTip": "F:\\netcourse\\C_Sharp\\ConsoleApp2\\ConsoleApp2\\Program.cs*",
+              "RelativeToolTip": "ConsoleApp2\\Program.cs*",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBcAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-02T08:24:27.884Z",
               "EditorCaption": ""
