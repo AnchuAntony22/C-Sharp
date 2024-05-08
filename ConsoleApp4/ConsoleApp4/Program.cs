@@ -1,105 +1,185 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-class Hangman
+class HangmanGame
 {
-    static string[] words = { "apple", "banana", "orange", "grape", "pear" };
-    static Random rand = new Random();
-    static string secretWord = words[rand.Next(words.Length)];
-    static char[] guessedWord = new char[secretWord.Length];
-    static StringBuilder incorrectGuesses = new StringBuilder();
-    static int remainingGuesses = 10;
+    private string[] words; 
+    private string secretWord; 
+    private char[] guessedLetters; 
+    private StringBuilder incorrectGuesses; 
+    private int remainingGuesses = 10; 
+    private int incorrectAttempts = 0; 
 
-    static void Main(string[] args)
+    public HangmanGame()
     {
-        InitializeGuessedWord();
+        
+        words = File.ReadAllLines(@"F:\netcourse\C_Sharp\ConsoleApp4\ConsoleApp4\words.txt");
+
+        
+        Random random = new Random();
+        secretWord = words[random.Next(0, words.Length)].ToLower();
+        guessedLetters = new char[secretWord.Length];
+       
+        Array.Fill(guessedLetters, '_');
+        incorrectGuesses = new StringBuilder();
+    }
+
+    public void PrintHangman()
+    {
+        switch (incorrectAttempts)
+        {
+            case 0:
+                Console.WriteLine("__________");
+                Console.WriteLine("|        |");
+                Console.WriteLine("|");
+                Console.WriteLine("|");
+                Console.WriteLine("|");
+                Console.WriteLine("|");
+                Console.WriteLine("|_________");
+                break;
+            case 1:
+                Console.WriteLine("__________");
+                Console.WriteLine("|        |");
+                Console.WriteLine("|        O");
+                Console.WriteLine("|");
+                Console.WriteLine("|");
+                Console.WriteLine("|");
+                Console.WriteLine("|_________");
+                break;
+            case 2:
+                Console.WriteLine("__________");
+                Console.WriteLine("|        |");
+                Console.WriteLine("|        O");
+                Console.WriteLine("|        |");
+                Console.WriteLine("|");
+                Console.WriteLine("|");
+                Console.WriteLine("|_________");
+                break;
+            case 3:
+                Console.WriteLine("__________");
+                Console.WriteLine("|        |");
+                Console.WriteLine("|        O");
+                Console.WriteLine("|       /|");
+                Console.WriteLine("|");
+                Console.WriteLine("|");
+                Console.WriteLine("|_________");
+                break;
+            case 4:
+                Console.WriteLine("__________");
+                Console.WriteLine("|        |");
+                Console.WriteLine("|        O");
+                Console.WriteLine("|       /|\\");
+                Console.WriteLine("|");
+                Console.WriteLine("|");
+                Console.WriteLine("|_________");
+                break;
+            case 5:
+                Console.WriteLine("__________");
+                Console.WriteLine("|        |");
+                Console.WriteLine("|        O");
+                Console.WriteLine("|       /|\\");
+                Console.WriteLine("|       /");
+                Console.WriteLine("|");
+                Console.WriteLine("|_________");
+                break;
+            case 6:
+                Console.WriteLine("__________");
+                Console.WriteLine("|        |");
+                Console.WriteLine("|        O");
+                Console.WriteLine("|       /|\\");
+                Console.WriteLine("|       / \\");
+                Console.WriteLine("|");
+                Console.WriteLine("|_________");
+                break;
+        }
+    }
+
+    public void Play()
+    {
         Console.WriteLine("Welcome to Hangman!");
+        Console.WriteLine("Guess the word:");
 
-        while (remainingGuesses > 0 && !IsWordGuessed())
+        while (remainingGuesses > 0)
         {
-            DisplayGameStatus();
-            Console.WriteLine($"Remaining guesses: {remainingGuesses}");
-            Console.WriteLine("Enter a letter or guess the whole word:");
-            string input = Console.ReadLine().ToLower();
+            Console.WriteLine("Word: " + string.Join(" ", guessedLetters));
+            Console.WriteLine("Incorrect guesses: " + incorrectGuesses);
+            Console.WriteLine($"Guesses remaining: {remainingGuesses}");
 
-            if (input.Length == 1)
+            PrintHangman(); 
+
+            string guess = Console.ReadLine().ToLower();
+
+            if (guess.Length == 1) 
             {
-                GuessLetter(input[0]);
+                if (secretWord.Contains(guess))
+                {
+                    for (int i = 0; i < secretWord.Length; i++)
+                    {
+                        if (secretWord[i] == guess[0])
+                        {
+                            guessedLetters[i] = guess[0];
+                        }
+                    }
+                }
+                else
+                {
+                    if (!incorrectGuesses.ToString().Contains(guess))
+                    {
+                        incorrectGuesses.Append(guess + " ");
+                        remainingGuesses--;
+                        incorrectAttempts++;
+                    }
+                }
             }
-            else if (input.Length == secretWord.Length)
+            else 
             {
-                GuessWord(input);
+                if (guess == secretWord)
+                {
+                    Console.WriteLine($"Congratulations! You've guessed the word: {secretWord}");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Incorrect guess!");
+                    remainingGuesses--;
+                }
             }
-            else
+
+            if (string.Join("", guessedLetters) == secretWord)
             {
-                Console.WriteLine("Invalid input. Please enter a single letter or guess the whole word.");
-            }
-        }
-
-        if (IsWordGuessed())
-        {
-            Console.WriteLine($"Congratulations! You guessed the word: {secretWord}");
-        }
-        else
-        {
-            Console.WriteLine($"Sorry, you ran out of guesses. The word was: {secretWord}");
-        }
-    }
-
-    static void InitializeGuessedWord()
-    {
-        for (int i = 0; i < secretWord.Length; i++)
-        {
-            guessedWord[i] = '_';
-        }
-    }
-
-    static void DisplayGameStatus()
-    {
-        Console.WriteLine("Word: " + string.Join(" ", guessedWord));
-        Console.WriteLine("Incorrect guesses: " + incorrectGuesses);
-    }
-
-    static void GuessLetter(char letter)
-    {
-        bool letterFound = false;
-        for (int i = 0; i < secretWord.Length; i++)
-        {
-            if (secretWord[i] == letter)
-            {
-                guessedWord[i] = letter;
-                letterFound = true;
+                Console.WriteLine($"Congratulations! You've guessed the word: {secretWord}");
+                return;
             }
         }
 
-        if (!letterFound)
-        {
-            if (!incorrectGuesses.ToString().Contains(letter))
-            {
-                incorrectGuesses.Append(letter + " ");
-                remainingGuesses--;
-            }
-        }
-    }
-
-    static void GuessWord(string word)
-    {
-        if (word == secretWord)
-        {
-            for (int i = 0; i < secretWord.Length; i++)
-            {
-                guessedWord[i] = secretWord[i];
-            }
-        }
-        else
-        {
-            remainingGuesses--;
-        }
-    }
-
-    static bool IsWordGuessed()
-    {
-        return !Array.Exists(guessedWord, element => element == '_');
+        Console.WriteLine("Sorry, you've run out of guesses. The word was: " + secretWord);
     }
 }
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        bool playAgain = true;
+
+        while (playAgain)
+        {
+            HangmanGame game = new HangmanGame();
+            game.Play();
+
+            Console.WriteLine("Do you want to play again? (yes/no)");
+            string playAgainInput = Console.ReadLine().ToLower();
+
+            if (playAgainInput != "yes")
+            {
+                playAgain = false;
+            }
+        }
+
+        Console.WriteLine("Thanks for playing Hangman!");
+    }
+}
+
+
