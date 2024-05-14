@@ -8,11 +8,6 @@ namespace Console_calc
 {
     public class Calc
     {
-        public decimal Addition(decimal num1, decimal num2)
-        {
-            return num1 + num2;
-        }
-
         public decimal Addition(params decimal[] numbers)
         {
             decimal sum = 0;
@@ -21,11 +16,6 @@ namespace Console_calc
                 sum += num;
             }
             return sum;
-        }
-
-        public decimal Subtraction(decimal num1, decimal num2)
-        {
-            return num1 - num2;
         }
 
         public decimal Subtraction(params decimal[] numbers)
@@ -38,18 +28,27 @@ namespace Console_calc
             return result;
         }
 
-        public decimal Multiplication(decimal num1, decimal num2)
+        public decimal Multiplication(params decimal[] numbers)
         {
-            return num1 * num2;
+            decimal result = 1;
+            foreach (var num in numbers)
+            {
+                result *= num;
+            }
+            return result;
         }
 
-        public decimal Division(decimal num1, decimal num2)
+        public decimal Division(decimal num1, params decimal[] numbers)
         {
-            if (num2 == 0)
+            foreach (var num in numbers)
             {
-                throw new DivideByZeroException("Cannot divide by zero.");
+                if (num == 0)
+                {
+                    throw new DivideByZeroException("Cannot divide by zero.");
+                }
+                num1 /= num;
             }
-            return num1 / num2;
+            return num1;
         }
     }
 }

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_calc", "Console_calc\Console_calc.csproj", "{DE533455-F99F-4CA2-BC79-4EC332B79713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console_calc", "Console_calc\Console_calc.csproj", "{DE533455-F99F-4CA2-BC79-4EC332B79713}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCalc", "TestCalc\TestCalc.csproj", "{BB93CCCB-F419-44B3-B728-CEF20ABC981E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DE533455-F99F-4CA2-BC79-4EC332B79713}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE533455-F99F-4CA2-BC79-4EC332B79713}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE533455-F99F-4CA2-BC79-4EC332B79713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB93CCCB-F419-44B3-B728-CEF20ABC981E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB93CCCB-F419-44B3-B728-CEF20ABC981E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB93CCCB-F419-44B3-B728-CEF20ABC981E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB93CCCB-F419-44B3-B728-CEF20ABC981E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

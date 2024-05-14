@@ -3,3 +3,13 @@ F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.Ass
 F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.AssemblyInfo.cs
 F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.csproj.CoreCompileInputs.cache
 F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.sourcelink.json
+F:\netcourse\C_Sharp\Console_calc\Console_calc\bin\Debug\net8.0\Console_calc.exe
+F:\netcourse\C_Sharp\Console_calc\Console_calc\bin\Debug\net8.0\Console_calc.deps.json
+F:\netcourse\C_Sharp\Console_calc\Console_calc\bin\Debug\net8.0\Console_calc.runtimeconfig.json
+F:\netcourse\C_Sharp\Console_calc\Console_calc\bin\Debug\net8.0\Console_calc.dll
+F:\netcourse\C_Sharp\Console_calc\Console_calc\bin\Debug\net8.0\Console_calc.pdb
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.dll
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\refint\Console_calc.dll
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.pdb
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.genruntimeconfig.cache
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\ref\Console_calc.dll
