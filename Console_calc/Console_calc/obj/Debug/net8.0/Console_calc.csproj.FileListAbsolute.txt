@@ -1,0 +1,5 @@
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.GeneratedMSBuildEditorConfig.editorconfig
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.AssemblyInfoInputs.cache
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.AssemblyInfo.cs
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.csproj.CoreCompileInputs.cache
+F:\netcourse\C_Sharp\Console_calc\Console_calc\obj\Debug\net8.0\Console_calc.sourcelink.json
