@@ -27,28 +27,18 @@ namespace Console_calc
             }
             return result;
         }
-
-        public decimal Multiplication(params decimal[] numbers)
+        public decimal Multiplication(decimal num1, decimal num2)
         {
-            decimal result = 1;
-            foreach (var num in numbers)
-            {
-                result *= num;
-            }
-            return result;
+            return num1 * num2;
         }
 
-        public decimal Division(decimal num1, params decimal[] numbers)
+        public decimal Division(decimal num1, decimal num2)
         {
-            foreach (var num in numbers)
+            if (num2 == 0)
             {
-                if (num == 0)
-                {
-                    throw new DivideByZeroException("Cannot divide by zero.");
-                }
-                num1 /= num;
+                throw new DivideByZeroException("Cannot divide by zero.");
             }
-            return num1;
+            return num1 / num2;
         }
     }
 }

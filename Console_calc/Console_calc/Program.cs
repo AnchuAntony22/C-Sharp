@@ -30,6 +30,7 @@ public class Program
             switch (choice)
             {
                 case 1:
+
                     Console.WriteLine("Enter numbers separated by space:");
                     string[] addInput = Console.ReadLine().Split(' ');
                     decimal[] addNumbers = new decimal[addInput.Length];
@@ -44,6 +45,7 @@ public class Program
                     Console.WriteLine($"Result: {calculator.Addition(addNumbers)}");
                     break;
                 case 2:
+
                     Console.WriteLine("Enter numbers separated by space:");
                     string[] subInput = Console.ReadLine().Split(' ');
                     decimal[] subNumbers = new decimal[subInput.Length];
@@ -57,49 +59,69 @@ public class Program
                     }
                     Console.WriteLine($"Result: {calculator.Subtraction(subNumbers)}");
                     break;
-
-
                 case 3:
-                    Console.WriteLine("Enter numbers separated by space:");
+
+                    Console.WriteLine("Enter two numbers separated by space:");
                     string[] mulInput = Console.ReadLine().Split(' ');
-                    decimal[] mulNumbers = new decimal[mulInput.Length];
-                    for (int i = 0; i < mulInput.Length; i++)
+                    decimal mulNum1, mulNum2;
+                    if (mulInput.Length != 2)
                     {
-                        if (!decimal.TryParse(mulInput[i], out mulNumbers[i]))
-                        {
-                            Console.WriteLine("Invalid input. Please enter decimal numbers separated by space.");
-                            continue;
-                        }
+                        Console.WriteLine("Invalid input. Please enter two decimal numbers separated by space.");
+                        continue;
                     }
-                    Console.WriteLine($"Result: {calculator.Multiplication(mulNumbers)}");
+
+                    try
+                    {
+                        mulNum1 = decimal.Parse(mulInput[0]);
+                        mulNum2 = decimal.Parse(mulInput[1]);
+                    }
+                    catch (FormatException)
+                    {
+                        Console.WriteLine("Invalid input. Please enter two valid decimal numbers separated by space.");
+                        continue;
+                    }
+
+                    Console.WriteLine($"Result: {calculator.Multiplication(mulNum1, mulNum2)}");
                     break;
 
                 case 4:
-                    Console.WriteLine("Enter numbers separated by space:");
+
+                    Console.WriteLine("Enter two numbers separated by space:");
                     string[] divInput = Console.ReadLine().Split(' ');
-                    decimal[] divNumbers = new decimal[divInput.Length];
-                    for (int i = 0; i < divInput.Length; i++)
+                    decimal divNum1, divNum2;
+
+                    if (divInput.Length != 2)
                     {
-                        if (!decimal.TryParse(divInput[i], out divNumbers[i]))
+                        Console.WriteLine("Invalid input. Please enter two decimal numbers separated by space.");
+                        continue;
+                    }
+
+                    try
+                    {
+                        divNum1 = decimal.Parse(divInput[0]);
+                        divNum2 = decimal.Parse(divInput[1]);
+
+                        if (divNum2 == 0)
                         {
-                            Console.WriteLine("Invalid input. Please enter decimal numbers separated by space.");
+                            Console.WriteLine("Invalid input. Cannot divide by zero.");
                             continue;
                         }
                     }
-                    try
+                    catch (FormatException)
                     {
-                        Console.WriteLine($"Result: {calculator.Division(divNumbers[0], divNumbers.Skip(1).ToArray())}");
+                        Console.WriteLine("Invalid input. Please enter two valid decimal numbers separated by space.");
+                        continue;
                     }
-                    catch (DivideByZeroException)
-                    {
-                        Console.WriteLine("Cannot divide by zero.");
-                    }
+
+                    Console.WriteLine($"Result: {calculator.Division(divNum1, divNum2)}");
                     break;
 
                 case 5:
+
                     Console.WriteLine("Exiting the program.");
                     return;
                 default:
+
                     Console.WriteLine("Invalid choice. Please enter a number between 1 and 5.");
                     break;
             }

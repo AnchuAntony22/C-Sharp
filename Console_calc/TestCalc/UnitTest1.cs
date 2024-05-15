@@ -5,39 +5,109 @@ namespace TestCalc
     public class UnitTest1
     {
        
+       
         [Fact]
-        public void TestAddition()
+        public void Addition_PositiveNumbers()
         {
             Calc calc = new Calc();
-            Assert.Equal(5m, calc.Addition(2m, 3m));
-            Assert.Equal(-1.2m, calc.Addition(new decimal[] { 2.5m, -3.7m, 0m }));
-           
+            decimal result = calc.Addition(2, 3, 4);
+            Assert.Equal(9, result);
         }
 
         [Fact]
-        public void TestSubtraction()
+        public void Addition_NegativeNumbers()
         {
             Calc calc = new Calc();
-            Assert.Equal(1m, calc.Subtraction(4m, 3m));
-            Assert.Equal(6.2m, calc.Subtraction(new decimal[] { 10m, 2.5m, 1.3m }));
-            
+            decimal result = calc.Addition(-2, -3, -4);
+            Assert.Equal(-9, result);
         }
 
         [Fact]
-        public void TestMultiplication()
+        public void Addition_DecimalNumbers()
         {
             Calc calc = new Calc();
-            Assert.Equal(15m, calc.Multiplication(3m, 5m));
-           
+            decimal result = calc.Addition(1.5m, 2.5m, -3.5m);
+            Assert.Equal(0.5m, result);
+        }
+
+
+        [Fact]
+        public void Subtraction_PositiveNumbers()
+        {
+            Calc calc = new Calc();
+            decimal result = calc.Subtraction(2, 3, 4);
+            Assert.Equal(9, result);
         }
 
         [Fact]
-        public void TestDivision()
+        public void Subtraction_NegativeNumbers()
         {
             Calc calc = new Calc();
-            Assert.Equal(2m, calc.Division(6m, 3m));
-            Assert.Throws<DivideByZeroException>(() => calc.Division(5m, 0m));
-            
+            decimal result = calc.Subtraction(-2, -3, -4);
+            Assert.Equal(-9, result);
         }
+
+        [Fact]
+        public void Subtraction_DecimalNumbers()
+        {
+            Calc calc = new Calc();
+            decimal result = calc.Subtraction(1.5m, 2.5m, -3.5m);
+            Assert.Equal(0.5m, result);
+        }
+        [Fact]
+        public void Multiplication_PositiveNumbers()
+        {
+            Calc calc = new Calc();
+            decimal result = calc.Multiplication(2, 3);
+            Assert.Equal(6, result);
+        }
+
+        [Fact]
+        public void Multiplication_NegativeNumbers()
+        {
+            Calc calc = new Calc();
+            decimal result = calc.Multiplication(-2, 3);
+            Assert.Equal(-6, result);
+        }
+
+        [Fact]
+        public void Multiplication_DecimalNumbers()
+        {
+            Calc calc = new Calc();
+            decimal result = calc.Multiplication(1.5m, 2.5m);
+            Assert.Equal(3.75m, result);
+        }
+        [Fact]
+        public void Division_PositiveNumbers()
+        {
+            Calc calc = new Calc();
+            decimal result = calc.Division(10, 2);
+            Assert.Equal(5, result);
+        }
+
+        [Fact]
+        public void Division_NegativeNumbers()
+        {
+            Calc calc = new Calc();
+            decimal result = calc.Division(-10, 2);
+            Assert.Equal(-5, result);
+        }
+
+        [Fact]
+        public void Division_DecimalNumbers()
+        {
+            Calc calc = new Calc();
+            decimal result = calc.Division(10m, 3m);
+            Assert.Equal(3.3333333333333333333333333m, result);
+        }
+
+        [Fact]
+        public void Division_DivideByZero()
+        {
+            Calc calc = new Calc();
+            Assert.Throws<DivideByZeroException>(() => calc.Division(10m, 0));
+        }
+
+
     }
 }
