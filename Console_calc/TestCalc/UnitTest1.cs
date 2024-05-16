@@ -30,6 +30,40 @@ namespace TestCalc
             Assert.Equal(0.5m, result);
         }
 
+     
+        [Theory]
+        [InlineData("1", "two", "3")]
+        [InlineData("1", "2", "3", "four")]
+        public void Addition_InvalidInputStrings(params string[] inputs)
+        {
+            Calc calc = new Calc();
+            Assert.Throws<FormatException>(() => {
+                decimal[] numbers = new decimal[inputs.Length];
+                for (int i = 0; i < inputs.Length; i++)
+                {
+                    numbers[i] = decimal.Parse(inputs[i]);
+                }
+                calc.Addition(numbers);
+            });
+        }
+
+        [Fact]
+        public void Addition_NullInputStrings()
+        {
+            Calc calc = new Calc();
+            decimal[] numbers = null;
+
+            Assert.Throws<ArgumentNullException>(() => calc.Addition(numbers));
+        }
+
+        [Fact]
+        public void Addition_EmptyInputStrings()
+        {
+            Calc calc = new Calc();
+            decimal[] numbers = new decimal[0];
+
+            Assert.Throws<ArgumentException>(() => calc.Addition(numbers));
+        }
 
         [Fact]
         public void Subtraction_PositiveNumbers()

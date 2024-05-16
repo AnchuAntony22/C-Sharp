@@ -27,18 +27,45 @@ namespace Console_calc
             }
             return result;
         }
-        public decimal Multiplication(decimal num1, decimal num2)
+        public decimal Multiplication(params decimal[] numbers)
         {
-            return num1 * num2;
+            if (numbers.Length == 0)
+            {
+               
+                throw new ArgumentException("At least one number must be provided.");
+            }
+
+            decimal result = 1; 
+
+            foreach (decimal num in numbers)
+            {
+                result *= num; 
+            }
+
+            return result;
         }
 
-        public decimal Division(decimal num1, decimal num2)
+
+        public decimal Division(params decimal[] numbers)
         {
-            if (num2 == 0)
+            if (numbers.Length < 2)
             {
-                throw new DivideByZeroException("Cannot divide by zero.");
+                throw new ArgumentException("At least two numbers must be provided for division.");
             }
-            return num1 / num2;
+
+            decimal result = numbers[0]; 
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i] == 0)
+                {
+                    throw new DivideByZeroException("Cannot divide by zero.");
+                }
+                result /= numbers[i]; 
+            }
+
+            return result;
         }
+
     }
 }

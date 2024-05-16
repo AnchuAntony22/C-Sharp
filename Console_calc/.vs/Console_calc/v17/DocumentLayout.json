@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "F:\\netcourse\\C_Sharp\\Console_calc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE533455-F99F-4CA2-BC79-4EC332B79713}|Console_calc\\Console_calc.csproj|f:\\netcourse\\c_sharp\\console_calc\\console_calc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE533455-F99F-4CA2-BC79-4EC332B79713}|Console_calc\\Console_calc.csproj|solutionrelative:console_calc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BB93CCCB-F419-44B3-B728-CEF20ABC981E}|TestCalc\\TestCalc.csproj|f:\\netcourse\\c_sharp\\console_calc\\testcalc\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB93CCCB-F419-44B3-B728-CEF20ABC981E}|TestCalc\\TestCalc.csproj|solutionrelative:testcalc\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE533455-F99F-4CA2-BC79-4EC332B79713}|Console_calc\\Console_calc.csproj|f:\\netcourse\\c_sharp\\console_calc\\console_calc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE533455-F99F-4CA2-BC79-4EC332B79713}|Console_calc\\Console_calc.csproj|solutionrelative:console_calc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE533455-F99F-4CA2-BC79-4EC332B79713}|Console_calc\\Console_calc.csproj|f:\\netcourse\\c_sharp\\console_calc\\console_calc\\calc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "F:\\netcourse\\C_Sharp\\Console_calc\\TestCalc\\UnitTest1.cs",
               "RelativeDocumentMoniker": "TestCalc\\UnitTest1.cs",
               "ToolTip": "F:\\netcourse\\C_Sharp\\Console_calc\\TestCalc\\UnitTest1.cs",
               "RelativeToolTip": "TestCalc\\UnitTest1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAtAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAA6wEIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T10:55:42.175Z",
               "EditorCaption": ""
@@ -45,20 +45,20 @@
               "RelativeDocumentMoniker": "Console_calc\\Calc.cs",
               "ToolTip": "F:\\netcourse\\C_Sharp\\Console_calc\\Console_calc\\Calc.cs",
               "RelativeToolTip": "Console_calc\\Calc.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAiwBQAAAAiAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA2wCsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T10:38:52.098Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\netcourse\\C_Sharp\\Console_calc\\Console_calc\\Program.cs",
               "RelativeDocumentMoniker": "Console_calc\\Program.cs",
               "ToolTip": "F:\\netcourse\\C_Sharp\\Console_calc\\Console_calc\\Program.cs",
               "RelativeToolTip": "Console_calc\\Program.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAQwH8AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T10:34:59.357Z",
               "EditorCaption": ""
