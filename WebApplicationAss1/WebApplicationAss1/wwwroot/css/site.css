@@ -20,10 +20,21 @@ html {
 body {
   margin-bottom: 60px;
 }
-.header-bg {
-    background-color: #164752;
+body.white-text {
+        color: white;
+}
+footer.text-muted {
+    color: inherit;
+}
+footer.text-muted a {
+    color: inherit; 
 }
 .welcome-section {
-    background-color: #90eada;
-    padding: 100px;
+    background-color: #57eee1;
+    padding: 5%;
+    
+}
+.header-bg {
+    background-color: #32a29e;
+    padding: 10px 0; 
 }
