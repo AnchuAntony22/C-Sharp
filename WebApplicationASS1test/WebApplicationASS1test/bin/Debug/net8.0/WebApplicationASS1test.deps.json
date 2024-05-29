@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "WebApplicationASS1test/1.0.0": {
+        "runtime": {
+          "WebApplicationASS1test.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebApplicationASS1test/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

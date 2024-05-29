@@ -1,0 +1,24 @@
+﻿@* @model YourNamespace.Models.YourModel *@
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home-container">
+    <div class="profile-section">
+        <img src="~/images/anchu.jpg" alt="Profile Picture" class="profile-img" />
+    </div>
+    <div class="intro-section">
+        <h1>Hello</h1>
+        <p class="intro-text">A Bit About Me</p>
+        <p>I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+        <div class="buttons">
+            @* <a href="#" class="btn btn-resume">Resume</a>
+            <a href="#" class="btn btn-projects">Projects</a>
+            <a href="#" class="btn btn-contact">Contact</a> *@
+            <a asp-area="" asp-controller="Home" asp-action="About" class="btn btn-resume">Resume</a>
+            <a asp-area="" asp-controller="Home" asp-action="Projects" class="btn btn-projects">Projects</a>
+            <a asp-area="" asp-controller="Home" asp-action="Contact" class="btn btn-contact">Contact</a>
+        </div>
+    </div>
+</div>
