@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\netcourse\C_Sharp\WebApplicationASS1test\WebApplicationASS1test
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/netcourse/C_Sharp/WebApplicationASS1test/WebApplicationASS1test/Views/Doctor/FeverCheck.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEZldmVyQ2hlY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/netcourse/C_Sharp/WebApplicationASS1test/WebApplicationASS1test/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

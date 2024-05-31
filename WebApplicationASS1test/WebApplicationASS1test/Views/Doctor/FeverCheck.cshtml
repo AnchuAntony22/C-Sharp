@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Fever Check";
+}
+<div class="text-center welcome-section">
+    <h1>Fever Check</h1>
+
+    <form method="post">
+        <label for="temperature">Enter your temperature:</label>
+        <input type="number" id="temperature" name="temperature" step="0.1" required>
+        <br>
+        <input type="radio" id="celsius" name="scale" value="Celsius" checked>
+        <label for="celsius">Celsius</label>
+        <input type="radio" id="fahrenheit" name="scale" value="Fahrenheit">
+        <label for="fahrenheit">Fahrenheit</label>
+        <br>
+        <button type="submit">Check</button>
+    </form>
+</div>
+@if (ViewBag.Diagnosis != null)
+{
+    <div class="text-center">
+    <p style="color:
+   @{
+       if (ViewBag.Diagnosis == "Your temperature is normal.")
+       {
+           <text>green</text>
+       }
+       else if (ViewBag.Diagnosis == "You have a fever.")
+       {
+           <text>red</text>
+       }
+       else if (ViewBag.Diagnosis == "You might be experiencing hypothermia.")
+       {
+           <text>orange</text>
+       }
+    }">@ViewBag.Diagnosis</p></div>
+}
