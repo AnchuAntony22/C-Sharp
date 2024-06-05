@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Guessing Game";
+}
+<div class="text-center welcome-section">
+    <h2>Guessing Game</h2>
+
+    <form method="post">
+        <label for="guess">Enter your guess (1-100):</label>
+        <input type="number" id="guess" name="guess" min="1" max="100" required />
+        <button type="submit">Guess</button>
+    </form>
+</div>
+@if (ViewBag.Message != null)
+{
+    <div class="text-center">
+        @if (ViewBag.Message.Contains("Congratulations"))
+        {
+            <p style="color: green;">@ViewBag.Message</p>
+        }
+        else
+        {
+            <p>@ViewBag.Message</p>
+        }
+    </div>
+}
+
+@if (ViewBag.GuessCount != null)
+{
+    <div class="text-center">
+        <p>Number of guesses: @ViewBag.GuessCount</p>
+    </div>
+}
+
+@if (ViewBag.HighScores != null && ViewBag.HighScores.Count > 0)
+{
+    <div class="text-center">
+        <h3>High Scores</h3>
+        
+            @foreach (var score in ViewBag.HighScores)
+            {
+            <p>@score</p>
+            }
+    </div>
+}
