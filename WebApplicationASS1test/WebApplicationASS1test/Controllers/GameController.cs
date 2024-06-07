@@ -29,11 +29,28 @@ namespace WebApplicationASS1test.Controllers
         [HttpPost]
         public IActionResult Index(int guess)
         {
-            
-            int randomNumber = int.Parse(HttpContext.Session.GetString(SessionRandomNumberKey) ?? new Random().Next(1, 101).ToString());
-            int guessCount = int.Parse(HttpContext.Session.GetString(SessionGuessCountKey) ?? "0");
 
             
+            string sessionRandomNumber = HttpContext.Session.GetString(SessionRandomNumberKey);
+            int randomNumber;
+            
+            if (string.IsNullOrEmpty(sessionRandomNumber))
+            {
+                randomNumber = new Random().Next(1, 101);
+                HttpContext.Session.SetString(SessionRandomNumberKey, randomNumber.ToString());
+            }
+            else
+            {
+                randomNumber = int.Parse(sessionRandomNumber);
+            }
+
+
+            int guessCount = int.Parse(HttpContext.Session.GetString(SessionGuessCountKey));
+            if (guessCount == int.MinValue)
+            {
+                guessCount = 0;
+            }
+
             guessCount++;
             HttpContext.Session.SetString(SessionGuessCountKey, guessCount.ToString());
 
