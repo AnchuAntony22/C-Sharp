@@ -1,0 +1,8 @@
+F:\netcourse\C_Sharp\WebApplicationCompany\WebApplicationCompany\obj\Debug\net8.0\WebApplicationCompany.GeneratedMSBuildEditorConfig.editorconfig
+F:\netcourse\C_Sharp\WebApplicationCompany\WebApplicationCompany\obj\Debug\net8.0\WebApplicationCompany.AssemblyInfoInputs.cache
+F:\netcourse\C_Sharp\WebApplicationCompany\WebApplicationCompany\obj\Debug\net8.0\WebApplicationCompany.AssemblyInfo.cs
+F:\netcourse\C_Sharp\WebApplicationCompany\WebApplicationCompany\obj\Debug\net8.0\WebApplicationCompany.csproj.CoreCompileInputs.cache
+F:\netcourse\C_Sharp\WebApplicationCompany\WebApplicationCompany\obj\Debug\net8.0\WebApplicationCompany.MvcApplicationPartsAssemblyInfo.cache
+F:\netcourse\C_Sharp\WebApplicationCompany\WebApplicationCompany\obj\Debug\net8.0\WebApplicationCompany.RazorAssemblyInfo.cache
+F:\netcourse\C_Sharp\WebApplicationCompany\WebApplicationCompany\obj\Debug\net8.0\WebApplicationCompany.RazorAssemblyInfo.cs
+F:\netcourse\C_Sharp\WebApplicationCompany\WebApplicationCompany\obj\Debug\net8.0\WebApplicationCompany.sourcelink.json

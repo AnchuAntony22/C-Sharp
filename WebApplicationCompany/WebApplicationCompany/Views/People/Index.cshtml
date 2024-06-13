@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using WebApplicationCompany.Models.Viewmodel
+
+@model PeopleViewModel
+
+<h2>People List</h2>
+
+<form asp-action="Index" method="get">
+    <input type="text" asp-for="Search" placeholder="Search by name or city" />
+    <input type="submit" value="Search" />
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model.People)
+        {
+            <tr>
+                <td>@person.Name</td>
+                <td>@person.City</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@person.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Create New Person</a>
