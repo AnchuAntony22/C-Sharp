@@ -4,34 +4,78 @@
 @using WebApplicationCompany.Models.Viewmodel
 
 @model PeopleViewModel
-
-<h2>People List</h2>
-
-<form asp-action="Index" method="get">
-    <input type="text" asp-for="Search" placeholder="Search by name or city" />
-    <input type="submit" value="Search" />
-</form>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>City</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var person in Model.People)
+<div class ="container d-flex flex-column align-items-center">
+    <div class="text-center w-100" style="max-width: 800px;">
+        <h2>People List</h2>
+        <form asp-action="Index" method="get" class="mb-3">
+            <div class="input-group">
+                <input type="text" asp-for="Search" placeholder="Search by name or city" class="form-control" />
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+        @if (!string.IsNullOrEmpty(Model.SearchResultMessage))
         {
-            <tr>
-                <td>@person.Name</td>
-                <td>@person.City</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@person.Id">Details</a>
-                </td>
-            </tr>
+            <div class="alert alert-info mt-3">
+                @Model.SearchResultMessage
+            </div>
         }
-    </tbody>
-</table>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
 
-<a asp-action="Create">Create New Person</a>
+                @foreach (var person in Model.People)
+                {
+                    <tr>
+                        <td>@person.Name</td>
+                        <td>@person.City</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@person.Id" class="btn btn-info btn-sm">Details</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <a asp-action="Create" class="btn btn-success mt-3">Create New Person</a>
+    </div>
+</div>
+
+
+<div class="container d-flex flex-column align-items-center">
+    <div class="text-center w-100" style="max-width: 800px;">
+        <h2>People List</h2>
+
+        <form asp-action="Index" method="get">
+        </form>
+
+        <div class="row">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var person in Model.People)
+                    {
+                        <tr>
+                            <td><partial name="_Person" model="person" /></td>
+                            
+                        </tr>
+                    }
+                </tbody>
+                </table>
+        </div>
+
+        <a asp-action="Create" class="btn btn-success mt-3">Create New Person</a>
+    </div>
+</div>

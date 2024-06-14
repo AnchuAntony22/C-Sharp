@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebApplicationCompany.Models;
+using WebApplicationCompany.Models.Implementations;
 using WebApplicationCompany.Models.Repo;
 using WebApplicationCompany.Models.Viewmodel;
 
@@ -8,11 +9,17 @@ namespace WebApplicationCompany.Controllers
 {
     public class PeopleController : Controller
     {
-        IPeopleService _peopleService;
+
+        private readonly IPeopleService _peopleService;
+
         public PeopleController(IPeopleService peopleService)
         {
             _peopleService = peopleService;
         }
+        //public PeopleController()
+        //{
+        //    _peopleService = new PeopleService(new InMemoryPeopleRepo());
+        //}
         public IActionResult Index(string searchString)
         {
             var viewModel = new PeopleViewModel
@@ -20,18 +27,28 @@ namespace WebApplicationCompany.Controllers
                 Search = searchString
             };
 
-            if (string.IsNullOrEmpty(searchString))
+            if (searchString == null || searchString.Trim() == "")
             {
                 viewModel.People = _peopleService.All();
+                
             }
             else
             {
                 viewModel.People = _peopleService.Search(searchString);
+
+                if (viewModel.People.Any())
+                {
+                    viewModel.SearchResultMessage = $"Results found for '{searchString}'.";
+                }
+                else
+                {
+                    viewModel.SearchResultMessage = $"No results found for '{searchString}'.";
+                }
             }
 
             return View(viewModel);
-            ;
         }
+
         public IActionResult Create()
         {
             return View();

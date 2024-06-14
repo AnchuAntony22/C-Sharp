@@ -1,7 +1,13 @@
+using WebApplicationCompany.Models.Implementations;
+using WebApplicationCompany.Models.Repo;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IPeopleRepo, InMemoryPeopleRepo>();
+builder.Services.AddScoped<IPeopleService, PeopleService>();
 
 var app = builder.Build();
 

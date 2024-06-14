@@ -6,12 +6,20 @@ namespace WebApplicationCompany.Models.Implementations
 {
     public class PeopleService : IPeopleService
     {
-        IPeopleRepo _peopleRepo;
+        private readonly IPeopleRepo _peopleRepo;
 
         public PeopleService(IPeopleRepo peopleRepo)
         {
             _peopleRepo = peopleRepo;
+
         }
+        //IPeopleRepo _peopleRepo;
+
+        //public PeopleService()
+        //{
+        //    //_peopleRepo = peopleRepo;
+        //    _peopleRepo = new InMemoryPeopleRepo();
+        //}
         public Person Add(CreatePersonViewModel person)
         {
 
