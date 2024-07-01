@@ -1,0 +1,15 @@
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\Console_linq.GeneratedMSBuildEditorConfig.editorconfig
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\Console_linq.AssemblyInfoInputs.cache
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\Console_linq.AssemblyInfo.cs
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\Console_linq.csproj.CoreCompileInputs.cache
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\Console_linq.sourcelink.json
+F:\netcourse\C_Sharp\Console_linq\Console_linq\bin\Debug\net8.0\Console_linq.exe
+F:\netcourse\C_Sharp\Console_linq\Console_linq\bin\Debug\net8.0\Console_linq.deps.json
+F:\netcourse\C_Sharp\Console_linq\Console_linq\bin\Debug\net8.0\Console_linq.runtimeconfig.json
+F:\netcourse\C_Sharp\Console_linq\Console_linq\bin\Debug\net8.0\Console_linq.dll
+F:\netcourse\C_Sharp\Console_linq\Console_linq\bin\Debug\net8.0\Console_linq.pdb
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\Console_linq.dll
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\refint\Console_linq.dll
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\Console_linq.pdb
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\Console_linq.genruntimeconfig.cache
+F:\netcourse\C_Sharp\Console_linq\Console_linq\obj\Debug\net8.0\ref\Console_linq.dll
