@@ -61,8 +61,8 @@ public class Program
         //    Console.WriteLine();
         //}
 
-        List<Concert> reducedVenueConcerts = concerts.Where(c => c.ReducedVenue).ToList();
-        //foreach (var concert in reducedVenueConcerts)
+        List<Concert> reducedConcerts = concerts.Where(c => c.ReducedVenue).ToList();
+        //foreach (var concert in reducedConcerts)
         //{
         //    Console.WriteLine($"Id: {concert.Id}");
         //    Console.WriteLine($"Reduced Venue: {concert.ReducedVenue}");
@@ -72,8 +72,8 @@ public class Program
         //    Console.WriteLine($"Full Capacity Sales: {concert.FullCapacitySales}");
         //    Console.WriteLine();
         //}
-        List<Concert> concertsIn2024 = concerts.Where(c => c.Date.Year == 2024).ToList();
-        foreach (var concert in concertsIn2024)
+        List<Concert> concerts2024 = concerts.Where(c => c.Date.Year == 2024).ToList();
+        foreach (var concert in concerts2024)
         {
             Console.WriteLine($"Id: {concert.Id}");
             Console.WriteLine($"Reduced Venue: {concert.ReducedVenue}");
