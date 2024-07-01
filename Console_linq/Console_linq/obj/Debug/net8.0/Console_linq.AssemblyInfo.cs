@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Console_linq")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38533dedad75aab6d2d07e16d1752d5b62cdc94e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4cf13e8bf5fb90fc9eb56f236ae9560642b3f9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Console_linq")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Console_linq")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -73,7 +73,30 @@ public class Program
         //    Console.WriteLine();
         //}
         List<Concert> concerts2024 = concerts.Where(c => c.Date.Year == 2024).ToList();
-        foreach (var concert in concerts2024)
+        //foreach (var concert in concerts2024)
+        //{
+        //    Console.WriteLine($"Id: {concert.Id}");
+        //    Console.WriteLine($"Reduced Venue: {concert.ReducedVenue}");
+        //    Console.WriteLine($"Date: {concert.Date}");
+        //    Console.WriteLine($"Performer: {concert.Performer}");
+        //    Console.WriteLine($"Begins At: {concert.BeginsAt}");
+        //    Console.WriteLine($"Full Capacity Sales: {concert.FullCapacitySales}");
+        //    Console.WriteLine();
+        //}
+        List<Concert> top5Concerts = concerts.OrderByDescending(c => c.FullCapacitySales).Take(5).ToList();
+        //foreach (var concert in top5Concerts)
+        //{
+        //    Console.WriteLine($"Id: {concert.Id}");
+        //    Console.WriteLine($"Reduced Venue: {concert.ReducedVenue}");
+        //    Console.WriteLine($"Date: {concert.Date}");
+        //    Console.WriteLine($"Performer: {concert.Performer}");
+        //    Console.WriteLine($"Begins At: {concert.BeginsAt}");
+        //    Console.WriteLine($"Full Capacity Sales: {concert.FullCapacitySales}");
+        //    Console.WriteLine();
+        //}
+        List<Concert> fridayConcerts = concerts.Where(c => c.Date.DayOfWeek == DayOfWeek.Friday).ToList();
+
+        foreach (var concert in fridayConcerts)
         {
             Console.WriteLine($"Id: {concert.Id}");
             Console.WriteLine($"Reduced Venue: {concert.ReducedVenue}");
@@ -83,6 +106,5 @@ public class Program
             Console.WriteLine($"Full Capacity Sales: {concert.FullCapacitySales}");
             Console.WriteLine();
         }
-
     }
 }
