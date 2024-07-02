@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPortfolio", "iPortfolio\iPortfolio.csproj", "{FE9BC81A-05B7-4D8A-85EE-FB1E93DAB71A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE9BC81A-05B7-4D8A-85EE-FB1E93DAB71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9BC81A-05B7-4D8A-85EE-FB1E93DAB71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9BC81A-05B7-4D8A-85EE-FB1E93DAB71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9BC81A-05B7-4D8A-85EE-FB1E93DAB71A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D6BFCB5-B404-4128-A736-0739B67C5EE0}
+	EndGlobalSection
+EndGlobal
