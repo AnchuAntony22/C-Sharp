@@ -17,8 +17,8 @@ namespace UnitTest
             int expectedId2 = 2;
 
             // Act
-            int actualId1 = TodoSequencer.Nexttodo();
-            int actualId2 = TodoSequencer.Nexttodo();
+            int actualId1 = TodoSequencer.NexttodoId();
+            int actualId2 = TodoSequencer.NexttodoId();
 
             // Assert
             Assert.Equal(expectedId1, actualId1);
@@ -29,11 +29,11 @@ namespace UnitTest
         public void Reset_Sets_Zero()
         {
             // Arrange
-            TodoSequencer.Nexttodo();
+            TodoSequencer.NexttodoId();
 
             // Act
             TodoSequencer.Reset();
-            int actualId = TodoSequencer.Nexttodo();
+            int actualId = TodoSequencer.NexttodoId();
 
             // Assert
             Assert.Equal(1, actualId);
