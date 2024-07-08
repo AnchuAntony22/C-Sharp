@@ -1,3 +1,10 @@
+using Console_core_project.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace UnitTest
 {
     public class PersonTests
@@ -10,7 +17,7 @@ namespace UnitTest
             string lastName = "Antony";
 
             //Act & Assert
-            Assert.Throws<ArgumentException>(() => new Console_core_project.Models.Person(id, null, lastName));
+            Assert.Throws<ArgumentException>(() => new Person(id, null, lastName));
 
                 
         }
@@ -22,7 +29,7 @@ namespace UnitTest
             string lastName = "Antony";
 
             //Act & Assert
-            Assert.Throws<ArgumentException>(() => new Console_core_project.Models.Person(id, " ", lastName));
+            Assert.Throws<ArgumentException>(() => new Person(id, "", lastName));
 
 
         }
@@ -34,7 +41,7 @@ namespace UnitTest
             string firstName = "Antony";
 
             //Act & Assert
-            Assert.Throws<ArgumentException>(() => new Console_core_project.Models.Person(id, firstName, null));
+            Assert.Throws<ArgumentException>(() => new Person(id, firstName, null));
 
 
         }
@@ -46,7 +53,7 @@ namespace UnitTest
             string firstName = "Antony";
 
             //Act & Assert
-            Assert.Throws<ArgumentException>(() => new Console_core_project.Models.Person(id, firstName, " "));
+            Assert.Throws<ArgumentException>(() => new Person(id, firstName, ""));
 
 
         }
