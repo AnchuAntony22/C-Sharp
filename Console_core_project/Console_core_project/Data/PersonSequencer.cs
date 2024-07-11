@@ -1,4 +1,4 @@
-﻿namespace Console_core_project.Models.Data
+﻿namespace Console_core_project.Data
 {
     public class PersonSequencer
     {

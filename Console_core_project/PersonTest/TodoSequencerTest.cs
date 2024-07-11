@@ -1,4 +1,4 @@
-﻿using Console_core_project.Models.Data;
+﻿using Console_core_project.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;

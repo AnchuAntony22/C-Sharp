@@ -1,4 +1,6 @@
-﻿namespace Console_core_project.Models.Data
+﻿using Console_core_project.Models;
+
+namespace Console_core_project.Data
 {
     public class PeopleService
     {
@@ -6,8 +8,8 @@
         public int Size()
         {
 
-            return people.Length; 
-        } 
+            return people.Length;
+        }
         public Person[] FindAll()
         {
 
@@ -34,8 +36,12 @@
         {
             people = new Person[0];
         }
+        public void Remove(int personId)
+        {
+            people = people.Where(p => p.Id != personId).ToArray();
+        }
     }
-        
+
 
 }
 
