@@ -27,11 +27,12 @@ namespace Console_core_project.Data
             return _context.Todos.Find(todoId);
         }
 
-        public Todo Add(string description)
+       
+        public Todo Add(string description, Person assignee)
         {
             int newId = TodoSequencer.NexttodoId();
             Todo newTodo = new Todo(newId, description); // Pass both id and description
-
+            newTodo.Assignee = assignee;
             _context.Todos.Add(newTodo);
             _context.SaveChanges();
 

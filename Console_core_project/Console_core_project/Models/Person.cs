@@ -9,12 +9,11 @@ namespace Console_core_project.Models
         //private readonly int id;
         private string firstName;
         private string lastName;
-        private Person() { }
-        public Person(int id, string firstName, string lastName)
+        public Person() { }
+        public Person(string firstName, string lastName)
         {
-            this.id = id;
-            this.FirstName = firstName;
-            this.LastName = lastName;
+            FirstName = firstName;
+            LastName = lastName;
         }
 
         public string FirstName

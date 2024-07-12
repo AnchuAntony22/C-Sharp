@@ -1,16 +1,17 @@
 ﻿using Console_core_project.Data;
 using Console_core_project.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Console_core_project.Controllers
 {
-    public class TodosController : Controller
+    public class TodoController : Controller
     {
-        private readonly TodoService _todoService;
-        private readonly PeopleService _peopleService;
+        private readonly TodoServiceDB _todoService;
+        private readonly PeopleServiceDB _peopleService;
 
        
-        public TodosController(TodoService todoService, PeopleService peopleService)
+        public TodoController(TodoServiceDB todoService, PeopleServiceDB peopleService)
         {
             _todoService = todoService;
             _peopleService = peopleService;
@@ -23,14 +24,18 @@ namespace Console_core_project.Controllers
             return View(todos);
         }
 
-        
+        [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.Assignees = _peopleService.FindAll();
+            var people = _peopleService.FindAll();
+            ViewBag.Assignees = people.Select(p => new SelectListItem
+            {
+                Value = p.Id.ToString(),
+                Text = p.FirstName
+            }).ToList();
+
             return View();
         }
-
-        
         [HttpPost]
         public IActionResult Create(Todo model)
         {
@@ -38,7 +43,13 @@ namespace Console_core_project.Controllers
             {
                 try
                 {
-                    _todoService.Add(model.Description, model.Assignee);
+                    // Retrieve the full Person object for the selected Assignee
+                    var assignee = _peopleService.FindById(model.Assignee.Id);
+                    model.Assignee = assignee; // Set the Assignee property with the retrieved Person object
+
+                    // Now you can add the todo item with the correct Assignee
+                    _todoService.Add(model.Description, assignee);
+
                     return RedirectToAction(nameof(Index));
                 }
                 catch (ArgumentException ex)
@@ -47,12 +58,18 @@ namespace Console_core_project.Controllers
                 }
             }
 
-           
-            ViewBag.Assignees = _peopleService.FindAll();
+            // If ModelState is not valid or an exception occurred, reload the view with necessary data
+            var people = _peopleService.FindAll();
+            ViewBag.Assignees = people.Select(p => new SelectListItem
+            {
+                Value = p.Id.ToString(),
+                Text = p.FirstName
+            }).ToList();
+
             return View(model);
         }
+    
 
-       
         public IActionResult Details(int id)
         {
             var todo = _todoService.FindById(id);

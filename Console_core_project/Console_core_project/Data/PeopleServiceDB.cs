@@ -1,5 +1,7 @@
 ﻿using Console_core_project.DataAccess;
 using Console_core_project.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Console_core_project.Data
 {
@@ -14,33 +16,47 @@ namespace Console_core_project.Data
 
         public int Size()
         {
-            return _context.People.Count(); // Use EF Core for counting
+            return _context.People.Count(); 
         }
 
         public Person[] FindAll()
         {
-            return _context.People.ToArray(); // Use EF Core to retrieve all people
+            return _context.People.ToArray(); 
         }
 
         public Person FindById(int personId)
         {
-            return _context.People.Find(personId); // Use EF Core to find by ID
+            return _context.People.Find(personId); 
         }
 
+        //public Person Add(string firstName, string lastName)
+        //{
+        //    int newId = PersonSequencer.NextPersonId();
+        //    var newPerson = new Person(newId, firstName, lastName);
+
+        //    _context.People.Add(newPerson); 
+        //    _context.SaveChanges(); 
+        //    return newPerson;
+        //}
         public Person Add(string firstName, string lastName)
         {
-            int newId = PersonSequencer.NextPersonId();
-            var newPerson = new Person(newId, firstName, lastName);
+            var newPerson = new Person(firstName, lastName);
 
-            _context.People.Add(newPerson); // Add person to context
-            _context.SaveChanges(); // Save changes to database
+            _context.People.Add(newPerson);
+            _context.SaveChanges();
             return newPerson;
         }
 
 
+        //public void Clear()
+        //{
+        //    _context.People.RemoveRange(_context.People); 
+        //    _context.SaveChanges();
+        //}
         public void Clear()
         {
-            _context.People.RemoveRange(_context.People); // Remove all people using EF Core
+            _context.People.RemoveRange(_context.People);
+            _context.Database.ExecuteSqlRaw("ALTER TABLE People AUTO_INCREMENT = 1;");
             _context.SaveChanges();
         }
 
@@ -49,10 +65,38 @@ namespace Console_core_project.Data
             var person = _context.People.Find(personId);
             if (person != null)
             {
-                _context.People.Remove(person); // Remove specific person using EF Core
+                _context.People.Remove(person); 
                 _context.SaveChanges();
             }
         }
+        public void Edit(int id, string firstName, string lastName)
+        {
+            var person = _context.People.Find(id);
+            if (person == null)
+            {
+                throw new ArgumentException("Person not found");
+            }
+
+            person.FirstName = firstName;
+            person.LastName = lastName;
+            _context.People.Update(person);
+            _context.SaveChanges();
+            Debug.WriteLine("Person updated successfully: " + person.FirstName + " " + person.LastName);
+        }
+
+        //public void Edit(int id, string firstName, string lastName)
+        //{
+        //    var person = _context.People.Find(id);
+        //    if (person == null)
+        //    {
+        //        throw new ArgumentException("Person not found");
+        //    }
+
+        //    person.FirstName = firstName;
+        //    person.LastName = lastName;
+        //    _context.People.Update(person);
+        //    _context.SaveChanges();
+        //}
     }
 
 }

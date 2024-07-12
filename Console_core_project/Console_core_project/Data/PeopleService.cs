@@ -23,8 +23,8 @@ namespace Console_core_project.Data
         }
         public Person Add(string firstName, string lastName)
         {
-            int newId = PersonSequencer.NextPersonId();
-            Person newPerson = new Person(newId, firstName, lastName);
+            //int newId = PersonSequencer.NextPersonId();
+            Person newPerson = new Person(firstName, lastName);
 
             Person[] newPeople = new Person[people.Length + 1];
             Array.Copy(people, newPeople, people.Length);

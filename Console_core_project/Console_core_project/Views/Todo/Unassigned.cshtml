@@ -1,6 +1,10 @@
-﻿@model IEnumerable<Console_core_project.Models.Todo>
+﻿@model Todo[]
 
 <h1>Unassigned Todos</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 
 <table class="table">
     <thead>
@@ -8,25 +12,22 @@
             <th>Id</th>
             <th>Description</th>
             <th>Done</th>
-            <th></th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var todo in Model)
+        @foreach (var item in Model)
         {
             <tr>
-                <td>@todo.Id</td>
-                <td>@todo.Description</td>
-                <td>@(todo.Done ? "Yes" : "No")</td>
+                <td>@item.Id</td>
+                <td>@item.Description</td>
+                <td>@(item.Done ? "Yes" : "No")</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@todo.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@todo.Id">Delete</a>
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }
     </tbody>
 </table>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>

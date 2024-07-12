@@ -1,9 +1,9 @@
-﻿@model IEnumerable<Console_core_project.Models.Person>
+﻿@model Person[]
 
-<h1>List of People</h1>
+<h1>People List</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    @Html.ActionLink("Create New", "Create")
 </p>
 
 <table class="table">
@@ -12,7 +12,7 @@
             <th>Id</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th></th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -23,7 +23,8 @@
                 <td>@person.FirstName</td>
                 <td>@person.LastName</td>
                 <td>
-                    <a asp-action="Delete" asp-route-id="@person.Id">Delete</a>
+                    @Html.ActionLink("Details", "Details", new { id = person.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = person.Id }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

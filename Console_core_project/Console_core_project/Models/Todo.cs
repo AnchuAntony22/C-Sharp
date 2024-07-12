@@ -10,7 +10,7 @@ namespace Console_core_project.Models
         private string description;
         private bool done;
         private Person assignee;
-        private Todo() { }
+        public Todo() { }
         public Todo(int id, string description)
         {
             if (string.IsNullOrEmpty(description))
@@ -33,6 +33,7 @@ namespace Console_core_project.Models
             get => done;
             set => done = value;
         }
+     
         public Person Assignee
         {
             get => assignee;

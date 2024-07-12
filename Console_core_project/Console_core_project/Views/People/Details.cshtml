@@ -1,0 +1,14 @@
+﻿@model Person
+
+<h1>Person Details</h1>
+
+<div>
+    <h4>Id: @Model.Id</h4>
+    <h4>First Name: @Model.FirstName</h4>
+    <h4>Last Name: @Model.LastName</h4>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

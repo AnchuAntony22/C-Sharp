@@ -1,3 +1,4 @@
+using Console_core_project.Data;
 using Console_core_project.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -10,8 +11,10 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<TodoDbContext>(options =>
         options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), 
         new MySqlServerVersion(new Version(8,0,34))));
-var app = builder.Build();
 
+builder.Services.AddScoped<PeopleServiceDB>();
+builder.Services.AddScoped<TodoServiceDB>();
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
