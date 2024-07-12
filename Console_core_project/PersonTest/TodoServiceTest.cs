@@ -22,15 +22,15 @@ namespace UnitTest
         {
             // Arrange
             string description = "it is a description";
-
+            var assignee = new Person(PersonSequencer.NextPersonId(), "First", "Last");
             // Act
-            Todo newTodo = todoService.Add(description);
+            Todo newTodo = todoService.Add(description, assignee);
 
             // Assert
             Assert.Equal(1, todoService.Size());
             Assert.Equal(description, newTodo.Description);
+            Assert.Equal(assignee, newTodo.Assignee);
 
-           
             todoService.Clear();
         }
 
@@ -38,7 +38,7 @@ namespace UnitTest
         public void FindById_TodoExists()
         {
             // Arrange
-            var todo = todoService.Add("Description 1");
+            var todo = todoService.Add("Description 1", new Person(PersonSequencer.NextPersonId(), "First", "Last"));
 
             // Act
             Todo foundTodo = todoService.FindById(todo.Id);
@@ -64,8 +64,8 @@ namespace UnitTest
         public void FindAll_ReturnsAllTodos()
         {
             // Arrange
-            todoService.Add("Description 1");
-            todoService.Add("Description 2");
+            todoService.Add("Description 1", new Person(PersonSequencer.NextPersonId(), "First", "Last"));
+            todoService.Add("Description 2", new Person(PersonSequencer.NextPersonId(), "First", "Last"));
 
             // Act
             Todo[] allTodos = todoService.FindAll();
@@ -81,8 +81,8 @@ namespace UnitTest
         public void Clear_RemovesAllTodos()
         {
             // Arrange
-            todoService.Add("Description 1");
-            todoService.Add("Description 2");
+            todoService.Add("Description 1", new Person(PersonSequencer.NextPersonId(), "First", "Last"));
+            todoService.Add("Description 2", new Person(PersonSequencer.NextPersonId(), "First", "Last"));
 
             // Act
             todoService.Clear();
@@ -96,9 +96,9 @@ namespace UnitTest
         public void FindByDoneStatus_ReturnsCorrectTodos()
         {
             // Arrange
-            var todo1 = todoService.Add("Description 1");
+            var todo1 = todoService.Add("Description 1", new Person(PersonSequencer.NextPersonId(), "First", "Last"));
             todo1.Done = true;
-            var todo2 = todoService.Add("Description 2");
+            var todo2 = todoService.Add("Description 2", new Person(PersonSequencer.NextPersonId(), "First", "Last"));
 
             // Act
             Todo[] doneTodos = todoService.FindByDoneStatus(true);
@@ -116,9 +116,9 @@ namespace UnitTest
         {
             // Arrange
             var person = new Person(PersonSequencer.NextPersonId(), "First", "Last");
-            var todo1 = todoService.Add("Description 1");
+            var todo1 = todoService.Add("Description 1",person);
             todo1.Assignee = person;
-            var todo2 = todoService.Add("Description 2");
+            var todo2 = todoService.Add("Description 2", person);
 
             // Act
             Todo[] assignedTodos = todoService.FindByAssignee(person.Id);
@@ -136,9 +136,9 @@ namespace UnitTest
         {
             // Arrange
             var person = new Person(PersonSequencer.NextPersonId(), "First", "Last");
-            var todo1 = todoService.Add("Description 1");
+            var todo1 = todoService.Add("Description 1",person);
             todo1.Assignee = person;
-            var todo2 = todoService.Add("Description 2");
+            var todo2 = todoService.Add("Description 2",person);
 
             // Act
             Todo[] assignedTodos = todoService.FindByAssignee(person);
@@ -154,8 +154,8 @@ namespace UnitTest
         public void FindUnassignedTodoItems_ReturnsCorrectTodos()
         {
             // Arrange
-            var todo1 = todoService.Add("Description 1");
-            var todo2 = todoService.Add("Description 2");
+            var todo1 = todoService.Add("Description 1", new Person(PersonSequencer.NextPersonId(), "First", "Last"));
+            var todo2 = todoService.Add("Description 2", new Person(PersonSequencer.NextPersonId(), "First", "Last"));
             todo2.Assignee = new Person(PersonSequencer.NextPersonId(), "First", "Last");
 
             // Act

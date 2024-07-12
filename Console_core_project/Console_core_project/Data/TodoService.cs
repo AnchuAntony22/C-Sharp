@@ -20,12 +20,12 @@ namespace Console_core_project.Data
 
             return Array.Find(todos, t => t.Id == todoId);
         }
-        public Todo Add(string description)
+        public Todo Add(string description, Person assignee)
         {
 
             int newId = TodoSequencer.NexttodoId();
             Todo newtoDo = new Todo(newId, description);
-
+            newtoDo.Assignee = assignee;
             Todo[] newtodos = new Todo[todos.Length + 1];
             Array.Copy(todos, newtodos, todos.Length);
             newtodos[todos.Length] = newtoDo;

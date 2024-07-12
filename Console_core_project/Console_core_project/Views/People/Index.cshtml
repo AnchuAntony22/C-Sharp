@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Console_core_project.Models.Person>
+
+<h1>List of People</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>@person.Id</td>
+                <td>@person.FirstName</td>
+                <td>@person.LastName</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@person.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+﻿@model Console_core_project.Models.Person
+
+<h1>Delete Person</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>First Name: @Model.FirstName</h4>
+    <h4>Last Name: @Model.LastName</h4>
+</div>
+
+<form asp-action="ConfirmDelete" asp-route-id="@Model.Id" method="post">
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-action="Index">Back to List</a>
+</form>
