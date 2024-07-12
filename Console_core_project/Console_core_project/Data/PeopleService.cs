@@ -5,6 +5,7 @@ namespace Console_core_project.Data
     public class PeopleService
     {
         private static Person[] people = new Person[0];
+
         public int Size()
         {
 

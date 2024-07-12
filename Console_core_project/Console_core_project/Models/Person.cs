@@ -1,11 +1,15 @@
-﻿namespace Console_core_project.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Console_core_project.Models
 {
     public class Person
     {
-        private readonly int id;
+        [Key]
+        public int id { get; private set; }
+        //private readonly int id;
         private string firstName;
         private string lastName;
-
+        private Person() { }
         public Person(int id, string firstName, string lastName)
         {
             this.id = id;

@@ -1,11 +1,16 @@
-﻿namespace Console_core_project.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Console_core_project.Models
 {
     public class Todo
     {
-        private readonly int id;
+        [Key]
+        public int id { get; private set; }
+        //private readonly int id;
         private string description;
         private bool done;
         private Person assignee;
+        private Todo() { }
         public Todo(int id, string description)
         {
             if (string.IsNullOrEmpty(description))

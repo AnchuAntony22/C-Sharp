@@ -1,8 +1,15 @@
+using Console_core_project.DataAccess;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using System.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<TodoDbContext>(options =>
+        options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), 
+        new MySqlServerVersion(new Version(8,0,34))));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
