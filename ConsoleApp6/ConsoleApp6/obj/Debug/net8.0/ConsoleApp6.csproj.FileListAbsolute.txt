@@ -1,0 +1,15 @@
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\ConsoleApp6.GeneratedMSBuildEditorConfig.editorconfig
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\ConsoleApp6.AssemblyInfoInputs.cache
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\ConsoleApp6.AssemblyInfo.cs
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\ConsoleApp6.csproj.CoreCompileInputs.cache
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\ConsoleApp6.sourcelink.json
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\bin\Debug\net8.0\ConsoleApp6.exe
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\bin\Debug\net8.0\ConsoleApp6.deps.json
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\bin\Debug\net8.0\ConsoleApp6.runtimeconfig.json
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\bin\Debug\net8.0\ConsoleApp6.dll
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\bin\Debug\net8.0\ConsoleApp6.pdb
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\ConsoleApp6.dll
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\refint\ConsoleApp6.dll
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\ConsoleApp6.pdb
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\ConsoleApp6.genruntimeconfig.cache
+F:\netcourse\C_Sharp\ConsoleApp6\ConsoleApp6\obj\Debug\net8.0\ref\ConsoleApp6.dll

@@ -28,29 +28,56 @@ namespace Console_core_project.Controllers
         public IActionResult Create()
         {
             var people = _peopleService.FindAll();
-            ViewBag.Assignees = people.Select(p => new SelectListItem
+            var viewModel = new TodoCreateViewModel
+            {
+                Assignees = people.Select(p => new SelectListItem
+                {
+                    Value = p.Id.ToString(),
+                    Text = p.FirstName
+                }).ToList()
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Create(TodoCreateViewModel viewModel)
+        {
+            // Re-populate the Assignees in case of validation errors
+            viewModel.Assignees = _peopleService.FindAll().Select(p => new SelectListItem
             {
                 Value = p.Id.ToString(),
                 Text = p.FirstName
             }).ToList();
 
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Create(Todo model)
-        {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    // Retrieve the full Person object for the selected Assignee
-                    var assignee = _peopleService.FindById(model.Assignee.Id);
-                    model.Assignee = assignee; // Set the Assignee property with the retrieved Person object
+                    if (!viewModel.AssigneeId.HasValue)
+                    {
+                        ModelState.AddModelError(nameof(viewModel.AssigneeId), "Assignee is required.");
+                    }
+                    else
+                    {
+                        var assignee = _peopleService.FindById(viewModel.AssigneeId.Value);
+                        if (assignee == null)
+                        {
+                            ModelState.AddModelError(nameof(viewModel.AssigneeId), "Selected assignee does not exist.");
+                        }
+                        else
+                        {
+                            var newTodo = new Todo
+                            {
+                                Description = viewModel.Description,
+                                Assignee = assignee,
+                                Done = false // Default value
+                            };
 
-                    // Now you can add the todo item with the correct Assignee
-                    _todoService.Add(model.Description, assignee);
-
-                    return RedirectToAction(nameof(Index));
+                            _todoService.Add(newTodo.Description, newTodo.Assignee);
+                            return RedirectToAction(nameof(Index));
+                        }
+                    }
                 }
                 catch (ArgumentException ex)
                 {
@@ -58,17 +85,12 @@ namespace Console_core_project.Controllers
                 }
             }
 
-            // If ModelState is not valid or an exception occurred, reload the view with necessary data
-            var people = _peopleService.FindAll();
-            ViewBag.Assignees = people.Select(p => new SelectListItem
-            {
-                Value = p.Id.ToString(),
-                Text = p.FirstName
-            }).ToList();
-
-            return View(model);
+            // Return view with validation errors
+            return View(viewModel);
         }
-    
+
+
+        [HttpPost]
 
         public IActionResult Details(int id)
         {
