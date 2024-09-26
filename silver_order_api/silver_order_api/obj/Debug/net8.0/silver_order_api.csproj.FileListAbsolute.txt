@@ -104,3 +104,5 @@ F:\netcourse\C_Sharp\silver_order_api\silver_order_api\obj\Debug\net8.0\refint\s
 F:\netcourse\C_Sharp\silver_order_api\silver_order_api\obj\Debug\net8.0\silver_order_api.pdb
 F:\netcourse\C_Sharp\silver_order_api\silver_order_api\obj\Debug\net8.0\silver_order_api.genruntimeconfig.cache
 F:\netcourse\C_Sharp\silver_order_api\silver_order_api\obj\Debug\net8.0\ref\silver_order_api.dll
+F:\netcourse\C_Sharp\silver_order_api\silver_order_api\bin\Debug\net8.0\System.Security.Permissions.dll
+F:\netcourse\C_Sharp\silver_order_api\silver_order_api\bin\Debug\net8.0\DataAnnotations.Reference.Assemblies.NetStandard13.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("silver_order_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a8a3e35432017e62611189bca4a446581a9d85d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6fc00ab55cfbaba0de2e60aae9c40c84da53958")]
 [assembly: System.Reflection.AssemblyProductAttribute("silver_order_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("silver_order_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

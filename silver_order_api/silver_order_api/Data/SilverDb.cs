@@ -10,5 +10,6 @@ namespace silver_order_api.Data
         public SilverDb(DbContextOptions<SilverDb> options) : base(options) { }
 
         public DbSet<MenuItem> MenuItems { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

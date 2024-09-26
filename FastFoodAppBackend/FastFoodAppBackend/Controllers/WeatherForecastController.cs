@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace silver_order_api.Controllers
+namespace FastFoodAppBackend.Controllers
 {
     [ApiController]
     [Route("[controller]")]
